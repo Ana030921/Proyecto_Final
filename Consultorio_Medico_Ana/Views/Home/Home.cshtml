@@ -1,0 +1,47 @@
+﻿@model ConsultorioMedico.Models.ViewModel.UserLogin
+@{
+    ViewBag.Title = "Home";
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body >
+
+    <div class="container">
+        <div class="card card-container">
+            <h2 class="titleLogin">Iniciar Sess&oacute;n</h2>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @using (Html.BeginForm("Usuario", "Home", FormMethod.Post, new { @class = "form-signin" }))
+            {
+                <di>
+                    @Html.TextBoxFor(dl => dl.Email, new { @class = "form-control", @placeholder = "Email" })
+                    @Html.ValidationMessageFor(dl => dl.Email, "", new { @class = "text-danger" })
+
+                </di><br />
+                <di>
+                    @Html.PasswordFor(dl => dl.Clave, new { @class = "form-control", @placeholder = "Contraseña" })
+                    @Html.ValidationMessageFor(dl => dl.Clave, "", new { @class = "text-danger" })
+
+                </di><br /><br />
+                <input id="Submit1" type="submit" value="Entrar" class="btn btn-signin" />
+
+
+            } <br />
+            <br />
+            <br />
+
+            @Html.ActionLink("Registrarse","SignIn","Home")
+        @{ if (!string.IsNullOrEmpty(ViewBag.Message)) {
+
+                <script type="text/javascript">
+                    alert('Email o Contraseña incorrectos');
+                </script>
+
+            } }
+
+        </div>
+    </div>
+
+</body>
+</html>

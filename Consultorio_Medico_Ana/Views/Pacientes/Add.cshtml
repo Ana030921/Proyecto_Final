@@ -1,0 +1,98 @@
+﻿@model ConsultorioMedico.Models.ViewModel.MantenimientoPacientes
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<div style="color:blue">
+    @ViewBag.Message
+
+</div>
+<style type="text/css">
+    .auto-style1 {
+        width: 100%;
+        border: 1px solid #cccccc;
+        background-color: #C0C0C0;
+    }
+
+    .auto-style2 {
+        width: 300px;
+    }
+
+    .auto-style3 {
+        width: 100px;
+    }
+</style>
+
+<h2>Mantenimiento de Paciente</h2>
+@using (Html.BeginForm("Add", "Pacientes", FormMethod.Post))
+{
+<div class="row">
+    <div class="form-group">
+       
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style3">
+                    @Html.LabelFor(dl => dl.Carnet)
+                </td>
+                <td class="auto-style2">
+                    @Html.TextBoxFor(dl => dl.Carnet)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3">
+                    @Html.LabelFor(dl => dl.Nombre)
+                </td>
+                <td class="auto-style2">
+                    @Html.TextBoxFor(dl => dl.Nombre)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3">
+                    @Html.LabelFor(dl => dl.Apellidos)
+                </td>
+                <td class="auto-style2">
+                    @Html.TextBoxFor(dl => dl.Apellidos)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3">
+                    @Html.LabelFor(dl => dl.Direccion)
+                </td>
+                <td class="auto-style2">
+                    @Html.TextBoxFor(dl => dl.Direccion)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3">
+                    @Html.LabelFor(dl => dl.Telefono)
+                </td>
+                <td class="auto-style2">
+                    @Html.TextBoxFor(dl => dl.Telefono)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3">
+                    @Html.LabelFor(dl => dl.Sexo)
+                </td>
+                <td class="auto-style2">
+                    @Html.TextBoxFor(dl => dl.Sexo)
+                </td>
+            </tr>
+            </table>
+
+</div>
+    <div class="form-group">
+        <input id="Submit1" type="submit" />
+    </div>
+</div>
+}
+

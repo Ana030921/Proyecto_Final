@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5095e78824374492a02bd60a8885fd11" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_Consultorio_MedicoModel.Cita" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Consultorio_MedicoModel.Medico" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Consultorio_MedicoModel.Paciente" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Consultorio_MedicoModel.Usuario" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="DB_Consultorio_MedicoModel.Id_Medicos_Id_Citas" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Consultorio_MedicoModel.Id_Paciente_Cita_Id_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_Consultorio_MedicoModel.Id_Medico_Id_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

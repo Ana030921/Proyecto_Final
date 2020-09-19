@@ -1,0 +1,46 @@
+﻿@model ConsultorioMedico.Models.ViewModel.SigIn
+
+@{
+    ViewBag.Title = "SigIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="card card-container">
+        <h3 class="titleLogin">Registrarse</h3>
+
+        @using (Html.BeginForm("SignIn", "Home", FormMethod.Post, new { @class = "form-signin" }))
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <di>
+                @Html.TextBoxFor(dl => dl.Nombre, new { @class = "form-control", @placeholder = "Nombre" })
+                @Html.ValidationMessageFor(dl => dl.Nombre, "", new { @class = "text-danger" })
+
+            </di><br />
+
+            <di>
+                @Html.PasswordFor(dl => dl.Clave, new { @class = "form-control", @placeholder = "Contraseña" })
+                @Html.ValidationMessageFor(dl => dl.Clave, "", new { @class = "text-danger" })
+
+            </di><br />
+
+            <di>
+                @Html.TextBoxFor(dl => dl.Email, new { @class = "form-control", @placeholder = "Email" })
+                @Html.ValidationMessageFor(dl => dl.Email, "", new { @class = "text-danger" })
+
+            </di><br />
+            if (!string.IsNullOrEmpty(ViewBag.Message))
+            {
+                <p class="errorMessage">@ViewBag.Message</p>
+            }
+
+            <input id="Submit1" type="submit" value="Entrar" class="btn btn-signin" />
+
+        } <br />
+        <br />
+        <br />
+        @Html.ActionLink("Login", "Home", "Home")
+    </div>
+</div>
+

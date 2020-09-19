@@ -1,0 +1,44 @@
+﻿
+@model ConsultorioMedico.Models.ViewModel.MantenimientoMedico
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+<h2>Mantenimientos de Medicos</h2>
+@using (Html.BeginForm("Add", "Medico", FormMethod.Post))
+{
+    <div class="row">
+        <div class="form-group">
+            <table style="width:100%;">
+                <tr>
+                    <td>&nbsp;@Html.LabelFor(dl => dl.Nombre)</td>
+                    <td>&nbsp;@Html.TextBoxFor(dl => dl.Nombre)</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;@Html.LabelFor(dl => dl.Apellidos)</td>
+                    <td>&nbsp;@Html.TextBoxFor(dl => dl.Apellidos)</td>
+                <tr></tr>
+                <td>&nbsp;@Html.LabelFor(dl => dl.Direccion)</td>
+                <td>&nbsp;@Html.TextBoxFor(dl => dl.Direccion)</td>
+                <tr></tr>
+                <td>&nbsp;@Html.LabelFor(dl => dl.Jornada)</td>
+                <td>&nbsp;@Html.TextBoxFor(dl => dl.Jornada)</td>
+
+                <tr></tr>
+                <td>&nbsp;@Html.LabelFor(dl => dl.Telefono)</td>
+                <td>&nbsp;@Html.TextBoxFor(dl => dl.Telefono)</td>
+
+                <tr></tr>
+                <td>&nbsp;@Html.LabelFor(dl => dl.Celular)</td>
+                <td>&nbsp;@Html.TextBoxFor(dl => dl.Celular)</td>
+
+                <tr></tr>
+                <td>&nbsp;@Html.LabelFor(dl => dl.Telefono_Oficina)</td>
+                <td>&nbsp;@Html.TextBoxFor(dl => dl.Telefono_Oficina)</td>
+
+                </tr>
+            </table>
+
+        </div>
+        <div class="form-group">
+            <input id="Submit1" type="submit" value="Enviar" />
+        </div>
+    </div>
+}
